@@ -33,7 +33,7 @@ public class Main {
         } else {
             System.out.println("Сегодня тепло, можно идти без шапки.");
         }
-        //ЗАДАЧА3
+                        //ЗАДАЧА3
         System.out.println("ЗАДАЧА 3");
         int speedLessThanSixty = 50;
         int speedMoreThanSixty = 72;
