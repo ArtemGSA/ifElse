@@ -49,7 +49,7 @@ public class Main {
             System.out.println("Если скорость " + speedLessThanSixty + ", то можно ездить спокойно.");
         }
         ;
-        //ЗАДАЧА4
+            //ЗАДАЧА4
         System.out.println("ЗАДАЧА 4");
         int ageLessThanSix = 4;
         int ageLessThanSeventeen = 14;
