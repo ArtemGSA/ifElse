@@ -1,6 +1,6 @@
 public class Main {
 
-    //ЗАДАЧА1
+            //ЗАДАЧА1
     public static void main(String[] args) {
         System.out.println("ЗАДАЧА 1");
         int ageMax = 20;
