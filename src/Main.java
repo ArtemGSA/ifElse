@@ -17,7 +17,7 @@ public class Main {
             System.out.println("Если возраст человека равен " + ageMax + ", то он совершеннолетний.");
         }
         ;
-        //ЗАДАЧА2
+                    //ЗАДАЧА2
         System.out.println("ЗАДАЧА 2");
         int tempLessThanFive = 0;
         int tempMoreThanFive = 7;
