@@ -1,80 +1,72 @@
+import java.time.LocalDate;
 public class Main {
-
-    //ЗАДАЧА1
     public static void main(String[] args) {
-        System.out.println("ЗАДАЧА 1");
-        int age = 15;
-        if (age < 18) {
-            System.out.println("Если возраст человека равен " + age + ", то он не достиг совершеннолетия, нужно немного подождать");
-        } else {
-            System.out.println("Если возраст человека равен " + age + ", то он совершеннолетний.");
+        task1();
+    }
+
+    public static boolean godVisocosniy(int year){
+        boolean b = true;
+        if(((year%4==0)&&(year%100!=0))||(year%400==0)){
+            b = true;
+        }
+        else{
+            b = false;
+        }
+        return b;
+    }
+    public static int deliveryTime(int range){
+        int time = 0;
+        if(range<20){
+            time = 1;
+        } else if (range<60) {
+            time = 2;
+        } else if (range<100) {
+            time = 3;
+        }
+        return time;
+    }
+    public static int printTaskNumber(int i){
+        System.out.println("//ЗАДАЧА" + i);
+        i+=1;
+        return i;
+    }
+
+    public static void versionControl(int polzovatelYear, int appleAndroid){
+        int currentYear = LocalDate.now().getYear();
+        if(currentYear>polzovatelYear){
+            System.out.print("Установите облегченную версию приложения для ");
+        }
+        if(appleAndroid == 1){
+            System.out.println("Android по ссылке");
+        }
+        else{
+            System.out.println("iOS по ссылке");
+        }
+    }
+
+    public static void task1(){
+        int i = 1;
+        i = printTaskNumber(i);
+        int year = 2021;
+        System.out.print(year);
+        if(godVisocosniy(year)){
+            System.out.println(" год - високосный год.");
+        }
+        else{
+            System.out.println(" год - невисокосный год.");
         }
         //ЗАДАЧА2
-        System.out.println("ЗАДАЧА 2");
-        int currentTemp = 6;
-        System.out.println("На улице " + currentTemp + " градусов.");
-        if (currentTemp <= 5) {
-            System.out.println("На улице холодно, нужно надеть шапку.");
-        } else {
-            System.out.println("Сегодня тепло, можно идти без шапки.");
-        }
+        i = printTaskNumber(i);
+        versionControl(2015,0);
         //ЗАДАЧА3
-        System.out.println("ЗАДАЧА 3");
-        int currentSpeed = 50;
-        if (currentSpeed > 60) {
-            System.out.println("Если скорость " + currentSpeed + ", то придётся заплатить штраф.");
-        } else {
-            System.out.println("Если скорость " + currentSpeed + ", то можно ездить спокойно.");
+        i = printTaskNumber(i);
+        int deliveryDistance = 95;
+        int dt = deliveryTime(deliveryDistance);
+        if(dt!=0){
+            System.out.println("Потребуется дней: " + dt);
         }
-        //ЗАДАЧА4
-        System.out.println("ЗАДАЧА 4");
-        age = 20;
-        System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить ");
-        if ((age <= 6) && (age >= 2)) {
-            System.out.println("в детский сад.");
-        } else if ((age > 6) && (age <= 17)) {
-            System.out.println("в школу.");
-        } else if ((age >= 18) & (age <= 24)) {
-            System.out.println("в университет.");
-        } else if (age > 24) {
-            System.out.println("на работу.");
-        }        //ЗАДАЧА5
-        System.out.println("ЗАДАЧА 5");
-        age = 4;
-        if (age < 5) {
-            System.out.println("Если возраст ребёнка равен " + age + ", то ему нельзя кататься на аттракционе.");
-        } else if (age < 14) {
-            System.out.println("Если возраст ребёнка равен " + age + ", то ему можно кататься на аттракционе в сопровождении взрослого.");
-        } else {
-            System.out.println("Если возраст ребёнка равен " + age + ", то ему можно кататься на атракционе без сопровождения взрослого.");
-        }
-        //ЗАДАЧА6
-        System.out.println("ЗАДАЧА 6");
-        int colichestvoZanytMest = 30;
-        int vsegoMest = 102;
-        int sidychihMest = 60;
-        if(colichestvoZanytMest>vsegoMest){
-            System.out.println("Места нет. Вагон забит.");
-        } else if (colichestvoZanytMest>sidychihMest) {
-            System.out.println("Место есть. Место стоячее.");
-        } else{
-            System.out.println("Место есть. Место сидячее.");
-        }
-        //ЗАДАЧА 7
-        System.out.println("ЗАДАЧА 7");
-        int one = 7;
-        int two = 6;
-        int three = 8;
-        if(one>two){
-            if(one>three){
-                System.out.println("one Больше всех. Оно равно " + one);
-            }else {
-                System.out.println("three Больше всех. Оно равно "+ three);
-            }
-        } else if (three>two) {
-            System.out.println("three Больше всех. Оно равно " + three);
-        }else {
-            System.out.println("two Больше всех. Оно равно "+ two);
+        else{
+            System.out.println("Доставки нет");
         }
     }
 }
