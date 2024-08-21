@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 public class Main {
     public static void main(String[] args) {
-        task1();
+        task1();test1();
     }
 
     public static boolean godVisocosniy(int year){
@@ -42,6 +42,10 @@ public class Main {
         else{
             System.out.println("iOS по ссылке");
         }
+    }
+
+    public static void test1(){
+        System.out.println("Тест успешен");
     }
 
     public static void task1(){
